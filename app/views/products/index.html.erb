@@ -1,5 +1,10 @@
-<h1>Products</h1>
-<%= link_to "New Product", "/products/new" %>
+<h4><%= link_to "New Product", "/products/new" %></h3>
+
+<h3>Products</h3>
 <% @products.each do |product| %>
-  <p><%= link_to product.name, "/products/#{product.id}" %> <%= product.description %> <%= product.formatted_price %></p>
+<h4><%= link_to product.name, "/products/#{product.id}" %> </h4>
+<ul>
+  <li><%= product.description %></li>
+  <li><%= product.formatted_price %></li>
+</ul>
 <% end %>
